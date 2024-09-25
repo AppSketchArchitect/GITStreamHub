@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion et Inscription</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Style du conteneur global */
+        .container {
+            width: 80%;
+            max-width: 700px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style des sections de connexion et d'inscription */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 30px 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenue sur la plateforme de streaming</h1>
+
+        <!-- Section de Connexion -->
+        <section id="login-section">
+            <h2>Connexion</h2>
+            <form action="/login" method="POST">
+                <label for="login-email">Email :</label>
+                <input type="email" id="login-email" name="login-email" placeholder="Votre email" required>
+
+                <label for="login-password">Mot de passe :</label>
+                <input type="password" id="login-password" name="login-password" placeholder="Votre mot de passe" required>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Section d'inscription -->
+        <section id="signup-section">
+            <h2>Inscription</h2>
+            <form action="/signup" method="POST">
+                <label for="signup-username">Nom d'utilisateur :</label>
+                <input type="text" id="signup-username" name="signup-username" placeholder="Votre nom d'utilisateur" required>
+
+                <label for="signup-email">Email :</label>
+                <input type="email" id="signup-email" name="signup-email" placeholder="Votre email" required>
+
+                <label for="signup-password">Mot de passe :</label>
+                <input type="password" id="signup-password" name="signup-password" placeholder="Votre mot de passe" required>
+
+                <label for="signup-confirm-password">Confirmer le mot de passe :</label>
+                <input type="password" id="signup-confirm-password" name="signup-confirm-password" placeholder="Confirmer votre mot de passe" required>
+
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>
